@@ -242,3 +242,4 @@ pnpm dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
     - [`Trans` component usage with components array](https://react.i18next.com/latest/trans-component#alternative-usage-components-array)
   - [i18n-ally VS Code extension](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
 # Spin-wheel-shopify-contact-form-popup
+# Spin-wheel-contact-form-popup
