@@ -1,0 +1,29 @@
+.modal-section {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Adjust this value based on how far you want the modal to slide in from the right side */
+  bottom: 0;
+  width: 400px; /* Adjust this value based on how wide you want the modal to be */
+  background-color: #fff;
+  z-index: 9999; /* Adjust this value based on the z-index of other elements on your site */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-out;
+}
+
+.modal-section.open {
+  transform: translateX(-400px); /* Adjust this value based on how far you want the modal to slide in */
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

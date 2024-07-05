@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+canvas{
+  width: 45vh !important;
+    height: 45vh !important;
+  background-color: red;
+  border-radius: 2rem;
+}
+canvas:empty {
+  display: initial;
+  background-color:red;
+}
+#pop-up{
+  display: block;
+}
+#alivenow-game {
+ display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #00000082;
+}
+#pop-up-container{
+  display: block;
+  top: 100px;
+}
+#form {
+  position: relative;
+    height: 100vh;
+    text-align: center;
+    display: none;
+    /* background-color: #CACFD2; */
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 36%);
+    z-index: 111;
+    /* /* max-width: 50%; */
+}
+#form h1{
+  z-index: 9999;
+  color: snow;
+}
+#backdrop{
+display: none;
+    /* position: fixed; */
+    width: 100%;
+    /* height: 30%; */
+    z-index: 111;
+    background: #f9fafb;
+    /* width: 100%; */
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    max-width: 30%;
+    align-items: center;
+    border-radius: 2rem;
+    min-width: 35rem;
+    padding: .5rem;
+
+}
+
+#backdrop button {
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-radius: 1.2rem;
+    background-color: #cccccc;
+}
+#backdrop button:hover {
+  background-color: #dddddd;
+}
+#controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#controls label {
+    margin: 8px;
+    width: 100%;
+    border-radius: 1.1rem;
+}
+#controls input {
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+    border-radius: 1rem;
+}
+#backdrop h2{
+      margin: 0;
+    padding: 1rem 0 .3rem 0;
+}
+
+#backdrop p{
+  margin: 0;
+    padding: 0 0 5px 0;
+
+}
+#form-error{
+  /* opacity: 0; */
+  display: none;
+  color: red;
+  padding: 0 0 5px 0;
+
+}
+/* style.css */
+
+.modal {
+display: none; /* Initially hide the modal */
+      position: fixed;
+    z-index: 999;
+    /* left: 25%; */
+    top: 20%;
+    width: 100%;
+    /* height: 100%; */
+    overflow: auto;
+    /* border-radius: 10px; */
+    /* max-width: 80%; */
+    min-width: 25%;
+    /* /* padding: 20%; */
+}
+
+.modal-content {
+      background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /* width: 90%; */
+    border-radius: 20px;
+    max-width: 30%;
+    min-width: 35rem;
+}
+
+/* Style the close button */
+#close-modal {
+  background-color: #cccccc;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#close-modal:hover {
+  background-color: #dddddd;
+}
+
