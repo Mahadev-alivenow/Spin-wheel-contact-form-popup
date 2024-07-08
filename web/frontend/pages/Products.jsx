@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useApiRequest from "../hooks/useApiRequest";
 import {Page, Layout, LegacyCard, Grid} from '@shopify/polaris';
-import { Add, Delete } from '@mui/icons-material';
+// import { Add, Delete } from '@mui/icons-material';
 import { useAuthenticatedFetch } from '@shopify/app-bridge-react';
 
 function Products() {
@@ -75,8 +75,8 @@ function Products() {
     <Page fullWidth>
       <Layout>
         <Layout.Section>
-          <button onClick={createHandler} className='button'>New <Add /></button>
-          <button onClick={deleteHandler} className='button'>Delete <Delete /></button>
+          <button onClick={createHandler} className='button'>New </button>
+          <button onClick={deleteHandler} className='button'>Delete </button>
         </Layout.Section>
         <Layout.Section>
           <Grid>
