@@ -16,6 +16,7 @@
     "extends": "@shopify/stylelint-polaris"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
     "@formatjs/intl-locale": "^3.3.2",
     "@formatjs/intl-localematcher": "^0.4.0",
     "@formatjs/intl-pluralrules": "^5.2.4",
