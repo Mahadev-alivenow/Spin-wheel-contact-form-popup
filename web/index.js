@@ -213,16 +213,15 @@ const SHOPIFY_API_SECRET =
 //MONGO DB connection
 // const url =
 //   "mongodb+srv://mahadev:ka039814@cluster0.tiauwuh.mongodb.net/auth-demo?retryWrites=true&w=majority";
-const url =
-  "mongodb+srv://shopify_app:UaN8cEXi3GOlH8vC@shopifyapp.hv0u0pc.mongodb.net/?retryWrites=true&w=majority&appName=shopifyApp";
+
 let client;
 try {
-  client = await mongoose.connect(url);
+  console.log(process.env.DATABASE_URL);
+  client = await mongoose.connect(process.env.DATABASE_URL);
   console.log("--- Connected to Mongoose Succesfully ---");
 } catch (error) {
   console.log("-- Mangoose can't connect!!! ---");
 }
-
 let userSchema = new mongoose.Schema({
   username: {
     type: String,
