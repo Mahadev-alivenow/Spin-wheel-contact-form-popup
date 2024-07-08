@@ -5,13 +5,14 @@
 
     <!-- Ensures that the UI is properly scaled in the Shopify Mobile app -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://seahorse-app-fstfy.ondigitalocean.app/;">
 
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
-<meta
+<!-- <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; img-src https://*; frame-src 'self'; sandbox allow-forms allow-scripts;" />
+  content="default-src 'self'; img-src https://*; frame-src 'self'; sandbox allow-forms allow-scripts;" /> -->
     <link rel="stylesheet" href="./App.css">
-    <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" allow-scripts></iframe>
+    <!-- <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" allow-scripts></iframe> -->
     <script type="module">
       if (!import.meta.env || !import.meta.env.PROD) {
         // Because the base HTML is rendered in the server side, we need to manually embed the code to enable HMR in our
