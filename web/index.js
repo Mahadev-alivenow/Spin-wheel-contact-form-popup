@@ -25,7 +25,11 @@ const STATIC_PATH =
     : `${process.cwd()}/frontend/`;
 
 const app = express();
-
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "sandbox allow-scripts"); // Allow inline scripts (carefully!)
+  // ... other CSP directives
+  next();
+});
 //set up shopify authentication and webhook handleing
 app.get(shopify.config.auth.path,shopify.auth.begin())
 app.get(shopify.config.auth.callbackPath,shopify.auth.callback(),shopify.redirectToShopifyOrAppRoot())
