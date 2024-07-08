@@ -28,7 +28,8 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "frame-ancestors 'self'; script-src 'self' 'unsafe-inline'"
+    "sandbox allow-scripts; default-src 'self'",
+    "frame-ancestors 'self'; script-src 'self' 'unsafe-inline'",
   ); // Allow scripts from self and inline (careful)
   next();
 });
