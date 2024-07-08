@@ -201,20 +201,23 @@ const SHOPIFY_API_SECRET =
 
 //MYSQL database
 
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "",
-  database: "shopify",
-});
+// const connection = mysql.createConnection({
+//   host: "127.0.0.1",
+//   user: "root",
+//   password: "",
+//   database: "shopify",
+// });
 
-connection.connect();
+// connection.connect();
 
 //MONGO DB connection
-
+// const url =
+//   "mongodb+srv://mahadev:ka039814@cluster0.tiauwuh.mongodb.net/auth-demo?retryWrites=true&w=majority";
+const url =
+  "mongodb+srv://shopify_app:UaN8cEXi3GOlH8vC@shopifyapp.hv0u0pc.mongodb.net/?retryWrites=true&w=majority&appName=shopifyApp";
 let client;
 try {
-  client = await mongoose.connect("mongodb://127.0.0.1:27017/shopify");
+  client = await mongoose.connect(url);
   console.log("--- Connected to Mongoose Succesfully ---");
 } catch (error) {
   console.log("-- Mangoose can't connect!!! ---");
@@ -268,19 +271,19 @@ app.post("/userdata/userinfo", async (req, res) => {
     //     if(error) throw error
     //   }
     // );
-    await connection.query(
-      "INSERT INTO users (name,email) VALUES (?,?)",
-      [userdata.username, userdata.useremail],
-      (error, results) => {
-        if (error) {
-          console.error(error);
-        } else {
-          console.log(" in SQL -- New user inserted successfully!");
-        }
-      }
-    );
+    // await connection.query(
+    //   "INSERT INTO users (name,email) VALUES (?,?)",
+    //   [userdata.username, userdata.useremail],
+    //   (error, results) => {
+    //     if (error) {
+    //       console.error(error);
+    //     } else {
+    //       console.log(" in SQL -- New user inserted successfully!");
+    //     }
+    //   }
+    // );
 
-    console.log("--- User Created Succesfully MONGO --- ");
+    console.log("--- User Created Succesfully MONGO alivenow --- ");
     res.status(200).json("--- User Created Succesfully --- ");
     return true;
   } catch (error) {
