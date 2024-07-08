@@ -9,8 +9,9 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; img-src https://*; child-src 'none'; sandbox allow-forms allow-scripts;" />
+  content="default-src 'self'; img-src https://*; frame-src 'self'; sandbox allow-forms allow-scripts;" />
     <link rel="stylesheet" href="./App.css">
+    <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" allow-scripts></iframe>
     <script type="module">
       if (!import.meta.env || !import.meta.env.PROD) {
         // Because the base HTML is rendered in the server side, we need to manually embed the code to enable HMR in our
@@ -24,7 +25,6 @@
   </head>
   <body>
     <div id="app"><!--index.jsx injects App.jsx here--></div>
-    <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" allow-scripts></iframe>
 
     <script type="module" src="/index.jsx"></script>
   </body>
