@@ -259,6 +259,7 @@ async function authenticateUser(req, res, next) {
   let shop = req.query.shop;
   let storeName = await shopify.config.sessionStorage.findSessionsByShop(shop);
   console.log(storeName)
+  console.log(shop);
   if (shop === storeName[0].shop) {
     next();
   } else {
