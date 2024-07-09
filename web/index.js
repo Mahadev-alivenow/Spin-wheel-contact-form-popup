@@ -260,7 +260,7 @@ async function authenticateUser(req, res, next) {
   let storeName = await shopify.config.sessionStorage.findSessionsByShop(shop);
   console.log(storeName)
   console.log(shop);
-  if (shop === storeName[0].shop) {
+  if (shop === storeName[0]?.shop) {
     next();
   } else {
     res.send("User not Autherised!.");
