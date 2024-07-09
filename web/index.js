@@ -36,17 +36,24 @@ app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
     // "sandbox allow-scripts; default-src 'self'",
-    `sandbox="allow-scripts"`,
-    `frame-ancestors https://spiny-wheel.myshopify.com https://seahorse-app-fstfy.ondigitalocean.app/;`
+    // `sandbox="allow-scripts"`,
+    `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com https://seahorse-app-fstfy.ondigitalocean.app/;`
     // `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com;`
     // "frame-ancestors 'none'; script-src 'self' 'unsafe-inline'"
   ); // Allow scripts from self and inline (careful)
   next();
 });
 //set up shopify authentication and webhook handleing
-app.get(shopify.config.auth.path,shopify.auth.begin())
-app.get(shopify.config.auth.callbackPath,shopify.auth.callback(),shopify.redirectToShopifyOrAppRoot())
-app.post(shopify.config.webhooks.path,shopify.processWebhooks({webhookHandlers:PrivacyWebhookHandlers}))
+app.get(shopify.config.auth.path, shopify.auth.begin());
+app.get(
+  shopify.config.auth.callbackPath,
+  shopify.auth.callback(),
+  shopify.redirectToShopifyOrAppRoot()
+);
+app.post(
+  shopify.config.webhooks.path,
+  shopify.processWebhooks({ webhookHandlers: PrivacyWebhookHandlers })
+);
 
 // If you are adding routes outside of the /api path, remember to
 // also add a proxy rule for them in web/frontend/vite.config.js
@@ -60,13 +67,11 @@ app.use("/userdata/*", authenticateUser);
 // const secret =
 //   "6c46527319e0b5ce2adc8ea706d08b2359aee09655047813623e0378f036b653";
 
-
 //hookdeck integration
 app.post("/shopify-webhooks-endpoint", async (req, res) => {
-  const orderData = req.body
-  console.log('Customer data recived endpoint--',orderData)
-  res.status(200).send('Webhook recived')
-  
+  const orderData = req.body;
+  console.log("Customer data recived endpoint--", orderData);
+  res.status(200).send("Webhook recived");
 });
 
 const sigHeaderName = "X-Signature-SHA256";
@@ -74,7 +79,6 @@ const sigHashAlg = "sha256";
 const sigPrefix = ""; //set this to your signature prefix if any
 const secret =
   "6c46527319e0b5ce2adc8ea706d08b2359aee09655047813623e0378f036b653";
-
 
 const SHOPIFY_SIGNATURE_SECRET = secret;
 if (!SHOPIFY_SIGNATURE_SECRET) {
@@ -114,7 +118,7 @@ function validateShopifySignature() {
       next(err);
     }
   };
-}  
+}
 
 app.use(express.json({ limit: "50mb" }));
 app.use(
@@ -142,7 +146,8 @@ app.post(
     console.log("validating....");
     // ...
   }
-);app.post(
+);
+app.post(
   "/api/webhooks/customer_deletion",
   validateShopifySignature(),
   (req, res, next) => {
@@ -157,7 +162,7 @@ app.post(
 // app.post("/api/webhooks/customer_request", handleWebhook);
 // app.post("/api/webhooks/deletion", handleWebhook);
 
-// Here go all your webhooks API handlers 
+// Here go all your webhooks API handlers
 
 // app.post("/webhooks/customers/data_request", async (ctx) => {
 // 	ctx.status = 200
@@ -183,19 +188,17 @@ app.post(
 const shopifySecret =
   "6c46527319e0b5ce2adc8ea706d08b2359aee09655047813623e0378f036b653";
 
-app.get("/fetch-webhooks-logs", async function(req,res){
-  console.log(req.body)
+app.get("/fetch-webhooks-logs", async function (req, res) {
+  console.log(req.body);
   // const webhook = await req.db.collection("webhooks").find().toArray();
 
-  res.status(200).send(' fetch webhook')
-})
+  res.status(200).send(" fetch webhook");
+});
 
 const SHOPIFY_API_SECRET =
   "6c46527319e0b5ce2adc8ea706d08b2359aee09655047813623e0378f036b653";
 
-
-
-  // Middleware to capture raw body
+// Middleware to capture raw body
 // app.use(shopify.config.webhooks.path, bodyParser.raw({ type: 'application/json' }), async (req, res, next) => {
 // const hmac = req.headers["x-shopify-hmac-sha256"];
 
@@ -216,7 +219,6 @@ const SHOPIFY_API_SECRET =
 
 // next();
 // });
-
 
 //MYSQL database
 
@@ -257,9 +259,9 @@ let User = mongoose.model("shopdashboard", userSchema);
 
 async function authenticateUser(req, res, next) {
   let shop = req.query.shop;
-  // let storeName = await shopify.config.sessionStorage.findSessionsByShop(shop);
-  let storeName = await shopify.shop
-  console.log(storeName)
+  let storeName = await shopify.config.sessionStorage.findSessionsByShop(shop);
+  // let storeName = await shopify.shop
+  console.log(storeName);
   console.log(shop);
   if (shop === storeName[0]?.shop) {
     next();
