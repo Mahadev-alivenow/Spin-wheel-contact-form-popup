@@ -25,6 +25,13 @@ const STATIC_PATH =
     : `${process.cwd()}/frontend/`;
 
 const app = express();
+
+app.get("/iframe", (req, res) => {
+  res.send(`
+    <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" sandbox="allow-scripts"></iframe>
+  `);
+});
+
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
