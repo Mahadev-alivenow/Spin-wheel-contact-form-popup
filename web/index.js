@@ -29,6 +29,7 @@ app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
     // "sandbox allow-scripts; default-src 'self'",
+    `sandbox="allow-scripts"`,
     `frame-ancestors https://spiny-wheel.myshopify.com https://seahorse-app-fstfy.ondigitalocean.app/;`
     // `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com;`
     // "frame-ancestors 'none'; script-src 'self' 'unsafe-inline'"
