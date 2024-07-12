@@ -70684,6 +70684,7 @@ userForm.addEventListener("click", async function (e) {
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin":"*"
     },
     //   body: JSON.stringify({ name: "venki", email: "venki@gmail.com" }),
     body: JSON.stringify(formdata),
