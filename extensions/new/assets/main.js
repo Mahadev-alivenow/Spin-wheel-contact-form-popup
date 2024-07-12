@@ -70679,7 +70679,7 @@ userForm.addEventListener("click", async function (e) {
   formdata.username = document.getElementById("name").value;
   formdata.useremail = document.getElementById("email").value;
 
-   const response = await fetch(`${location.origin}/apps/${proxy}/userinfo?shop=${Shopify.shop}`, {
+   const response = await fetch(`${location.origin}/apps/${proxy}?shop=${Shopify.shop}`, {
     method: "POST",
     headers: {
       Accept: "application/json, text/plain, */*",
