@@ -235,10 +235,14 @@ const SHOPIFY_API_SECRET =
 // const url =
 //   "mongodb+srv://mahadev:ka039814@cluster0.tiauwuh.mongodb.net/auth-demo?retryWrites=true&w=majority";
 
+//MONGO DB connection
+
+const url =
+  "mongodb+srv://mahadev:ka039814@cluster0.tiauwuh.mongodb.net/auth-demo?retryWrites=true&w=majority";
 let client;
 try {
-  console.log(process.env.DATABASE_URL);
-  client = await mongoose.connect(process.env.DATABASE_URL);
+  // console.log(process.env.DATABASE_URL);
+  client = await mongoose.connect(url);
   console.log("--- Connected to Mongoose Succesfully ---");
 } catch (error) {
   console.log("-- Mangoose can't connect!!! ---");
