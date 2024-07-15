@@ -21,7 +21,7 @@
     "@shopify/cli": "3.51.2",
     "@shopify/shopify-app-session-storage": "^3.0.2",
     "chart.js": "^4.4.3",
-    "mongoose": "^8.1.0",
+    "mongoose": "^8.5.1",
     "react-chartjs-2": "^5.2.0"
   },
   "author": "StackWiseDev",
