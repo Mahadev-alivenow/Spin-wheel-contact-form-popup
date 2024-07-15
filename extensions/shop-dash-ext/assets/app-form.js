@@ -4,7 +4,7 @@ userForm.addEventListener("submit", function(e) {
     e.preventDefault();
     let formData = new FormData(userForm);
     let data = [...formData.values()];
-    fetch(`${location.origin}/apps/proxy-1/userinfo?shop=${Shopify.shop}`, {
+    fetch(`${location.origin}/apps/proxy/userinfo?shop=${Shopify.shop}`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data),
