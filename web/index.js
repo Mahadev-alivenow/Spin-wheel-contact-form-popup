@@ -12,7 +12,13 @@ import mongoose from "mongoose";
 import { hostname, type } from "os";
 import crypto from 'crypto'
 
+const request = require("request");
 
+app.get("/proxy", (req, res) => {
+  const url = "https://seahorse-app-fstfy.ondigitalocean.app/";
+  console.log("proxy with request : " + url);
+  request(url).pipe(res);
+});
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
@@ -60,6 +66,9 @@ app.post(
 
 app.use("/api/*", shopify.validateAuthenticatedSession());
 app.use("/userdata/*", authenticateUser);
+
+
+
 
 //App
 // const sigHeaderName = 'x-shopify-hmac-sha256'
