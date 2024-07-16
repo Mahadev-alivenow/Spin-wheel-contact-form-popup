@@ -11,14 +11,11 @@ import PrivacyWebhookHandlers from "./privacy.js";
 import mongoose from "mongoose";
 import { hostname, type } from "os";
 import crypto from 'crypto'
+import request from "request";
 
-const request = require("request");
 
-app.get("/proxy", (req, res) => {
-  const url = "https://seahorse-app-fstfy.ondigitalocean.app/";
-  console.log("proxy with request : " + url);
-  request(url).pipe(res);
-});
+
+
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
@@ -31,7 +28,11 @@ const STATIC_PATH =
     : `${process.cwd()}/frontend/`;
 
 const app = express();
-
+app.get("/proxy", (req, res) => {
+  const url = "https://seahorse-app-fstfy.ondigitalocean.app/";
+  console.log("proxy with request : " + url);
+  request(url).pipe(res);
+});
 app.get("/iframe", (req, res) => {
   res.send(`
     <iframe src="https://seahorse-app-fstfy.ondigitalocean.app/" sandbox="allow-scripts"></iframe>
