@@ -39,17 +39,17 @@ app.get("/iframe", (req, res) => {
   `);
 });
 
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Content-Security-Policy",
-//     // "sandbox allow-scripts; default-src 'self'",
-//     // `sandbox="allow-scripts"`,
-//     `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com https://seahorse-app-fstfy.ondigitalocean.app/;`
-//     // `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com;`
-//     // "frame-ancestors 'none'; script-src 'self' 'unsafe-inline'"
-//   ); // Allow scripts from self and inline (careful)
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    // "sandbox allow-scripts; default-src 'self'",
+    // `sandbox="allow-scripts"`,
+    // `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com https://seahorse-app-fstfy.ondigitalocean.app/;`
+    // `frame-ancestors https://spiny-wheel.myshopify.com https://admin.shopify.com;`
+    "frame-ancestors *"
+  ); // Allow scripts from self and inline (careful)
+  next();
+});
 //set up shopify authentication and webhook handleing
 app.get(shopify.config.auth.path, shopify.auth.begin());
 app.get(
