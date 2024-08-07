@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "styling"
+client_id = "2cac912f23ddd03919bc6d844bac58b5"
+application_url = "https://makes-blocked-building-timeline.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://makes-blocked-building-timeline.trycloudflare.com/auth/callback",
+  "https://makes-blocked-building-timeline.trycloudflare.com/auth/shopify/callback",
+  "https://makes-blocked-building-timeline.trycloudflare.com/api/auth/callback",
+  "https://makes-blocked-building-timeline.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "react-node-form.myshopify.com"

@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "db"
+client_id = "b2bc6764a258da24931f1667f6f3ab99"
+application_url = "https://edge-rendered-restriction-engineering.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://edge-rendered-restriction-engineering.trycloudflare.com/auth/callback",
+  "https://edge-rendered-restriction-engineering.trycloudflare.com/auth/shopify/callback",
+  "https://edge-rendered-restriction-engineering.trycloudflare.com/api/auth/callback",
+  "https://edge-rendered-restriction-engineering.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[app_proxy]
+url = "https://edge-rendered-restriction-engineering.trycloudflare.com/userdata/userinfo"
+subpath = "proxy-4"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "node-dev-online-store.myshopify.com"

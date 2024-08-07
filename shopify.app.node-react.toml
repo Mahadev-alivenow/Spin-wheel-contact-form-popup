@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "node-react"
+client_id = "3d32e5864ca48d119e9def25c9ca53f2"
+application_url = "https://quarterly-aw-japan-situations.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://quarterly-aw-japan-situations.trycloudflare.com/auth/callback",
+  "https://quarterly-aw-japan-situations.trycloudflare.com/auth/shopify/callback",
+  "https://quarterly-aw-japan-situations.trycloudflare.com/api/auth/callback",
+  "https://quarterly-aw-japan-situations.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[app_proxy]
+url = "https://quarterly-aw-japan-situations.trycloudflare.com/userdata"
+subpath = "proxy-5"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "react-node-form.myshopify.com"

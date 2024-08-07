@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "node dev store"
+client_id = "b3f43f2ed41e9deecdc004e4c19bc9e8"
+application_url = "https://resistant-console-airport-distant.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://resistant-console-airport-distant.trycloudflare.com/auth/callback",
+  "https://resistant-console-airport-distant.trycloudflare.com/auth/shopify/callback",
+  "https://resistant-console-airport-distant.trycloudflare.com/api/auth/callback",
+  "https://resistant-console-airport-distant.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "react-node-form.myshopify.com"

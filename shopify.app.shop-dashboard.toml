@@ -1,0 +1,34 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e6a24b9a657577bd11481838171a8235"
+name = "shop-dashboard"
+application_url = "https://slip-several-life-library.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "react-node-form.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://slip-several-life-library.trycloudflare.com/auth/callback",
+  "https://slip-several-life-library.trycloudflare.com/auth/shopify/callback",
+  "https://slip-several-life-library.trycloudflare.com/api/auth/callback",
+  "https://slip-several-life-library.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[app_proxy]
+url = "https://quarterly-aw-japan-situations.trycloudflare.com/userdata"
+subpath = "proxy-5"
+prefix = "apps"
+
+[pos]
+embedded = false
