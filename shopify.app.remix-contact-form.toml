@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "cf6d0a71f3d1600f330d34f5811c8a9e"
+name = "Remix Contact Form"
+handle = "remix-contact-form"
+application_url = "https://behind-differences-example-communication.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "spiny-wheel.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://behind-differences-example-communication.trycloudflare.com/auth/callback",
+  "https://behind-differences-example-communication.trycloudflare.com/auth/shopify/callback",
+  "https://behind-differences-example-communication.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

@@ -3,7 +3,7 @@
 client_id = "2e6ca6aaca784f546bf9105ffe24a0a1"
 name = "Form"
 handle = "form-40"
-application_url = "https://jackets-plans-virtually-patches.trycloudflare.com"
+application_url = "https://dosage-keywords-allocation-garmin.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,16 +16,16 @@ scopes = "read_orders,write_products"
 
 [auth]
 redirect_urls = [
-  "https://jackets-plans-virtually-patches.trycloudflare.com/auth/callback",
-  "https://jackets-plans-virtually-patches.trycloudflare.com/auth/shopify/callback",
-  "https://jackets-plans-virtually-patches.trycloudflare.com/api/auth/callback"
+  "https://dosage-keywords-allocation-garmin.trycloudflare.com/auth/callback",
+  "https://dosage-keywords-allocation-garmin.trycloudflare.com/auth/shopify/callback",
+  "https://dosage-keywords-allocation-garmin.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
 api_version = "2024-07"
 
 [app_proxy]
-url = "https://jackets-plans-virtually-patches.trycloudflare.com/userdata/userinfo"
+url = "https://dosage-keywords-allocation-garmin.trycloudflare.com/userdata/userinfo"
 subpath = "proxy"
 prefix = "apps"
 
