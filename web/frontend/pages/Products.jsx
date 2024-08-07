@@ -9,7 +9,7 @@ import {
 import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuthenticatedFetch } from "../hooks";
-import { Add, Delete } from "@mui/icons-material";
+// import { Add, Delete } from "@mui/icons-material";
 import useApiRequest from "../hooks/useApiRequest";
 import MyModal from "../components/FormModal";
 
@@ -88,10 +88,10 @@ function Products() {
       <Layout>
         <Layout.Section>
           <button className="button" onClick={createhandler}>
-            New <Add />
+            New 
           </button>
           <button className="button" onClick={deletehandler}>
-            Delete <Delete />
+            Delete
           </button>
         </Layout.Section>
         <Layout.Section>
