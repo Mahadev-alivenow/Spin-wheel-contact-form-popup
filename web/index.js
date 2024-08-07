@@ -60,7 +60,7 @@ const url =
   // "mongodb+srv://mahadev:ka039814@cluster0.tiauwuh.mongodb.net/auth-demo?retryWrites=true&w=majority";
   "mongodb+srv://shopify_app:UaN8cEXi3GOlH8vC@shopifyapp.hv0u0pc.mongodb.net/?retryWrites=true&w=majority&appName=shopifyApp";
 try {
-  console.log("git  packages commit");
+  console.log("git  packages commit2");
   // console.log(url);
   console.log(process.env.DATABASE_URL);
   client = await mongoose.connect(url);
