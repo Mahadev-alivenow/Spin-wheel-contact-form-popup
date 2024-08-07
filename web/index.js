@@ -3,7 +3,7 @@ import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
 import serveStatic from "serve-static";
-import mysql from "mysql";
+// import mysql from "mysql";
 
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
@@ -44,14 +44,14 @@ app.use("/userdata/*", authenticateUser);
 
 //MYSQL database
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "shopify",
-});
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "shopify",
+// });
 
-connection.connect();
+// connection.connect();
 
 //MONGO DB connection
 
@@ -119,17 +119,17 @@ app.post("/userdata/userinfo", async (req, res) => {
     //     if(error) throw error
     //   }
     // );
-    await connection.query(
-      "INSERT INTO users (name,email) VALUES (?,?)",
-      [userdata.username, userdata.useremail],
-      (error, results) => {
-        if (error) {
-          console.error(error);
-        } else {
-          console.log(" in SQL -- New user inserted successfully!");
-        }
-      }
-    );
+    // await connection.query(
+    //   "INSERT INTO users (name,email) VALUES (?,?)",
+    //   [userdata.username, userdata.useremail],
+    //   (error, results) => {
+    //     if (error) {
+    //       console.error(error);
+    //     } else {
+    //       console.log(" in SQL -- New user inserted successfully!");
+    //     }
+    //   }
+    // );
 
     console.log("--- User Created Succesfully MONGO --- ");
     res.status(200).json("--- User Created Succesfully --- ");
