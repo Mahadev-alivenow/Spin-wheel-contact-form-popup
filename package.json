@@ -12,9 +12,10 @@
     "deploy": "shopify app deploy"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.19",
+    "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.14.19",
     "@shopify/app": "3.51.2",
     "@shopify/app-bridge-react": "^4.1.3",
