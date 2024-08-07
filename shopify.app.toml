@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "2e6ca6aaca784f546bf9105ffe24a0a1"
+name = "Form"
+handle = "form-40"
+application_url = "https://jackets-plans-virtually-patches.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "spin-wheel-game.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://jackets-plans-virtually-patches.trycloudflare.com/auth/callback",
+  "https://jackets-plans-virtually-patches.trycloudflare.com/auth/shopify/callback",
+  "https://jackets-plans-virtually-patches.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[app_proxy]
+url = "https://jackets-plans-virtually-patches.trycloudflare.com/userdata/userinfo"
+subpath = "proxy"
+prefix = "apps"
+
+[pos]
+embedded = false
