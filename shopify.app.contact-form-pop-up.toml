@@ -2,7 +2,7 @@
 
 name = "Contact-form-pop-up"
 client_id = "31fb66c1b7c967032e011360ca7b2411"
-application_url = "https://forward-combo-engagement-pensions.trycloudflare.com"
+application_url = "https://empty-guarantee-importantly-rp.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "read_orders,read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://forward-combo-engagement-pensions.trycloudflare.com/auth/callback",
-  "https://forward-combo-engagement-pensions.trycloudflare.com/auth/shopify/callback",
-  "https://forward-combo-engagement-pensions.trycloudflare.com/api/auth/callback",
-  "https://forward-combo-engagement-pensions.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://empty-guarantee-importantly-rp.trycloudflare.com/auth/callback",
+  "https://empty-guarantee-importantly-rp.trycloudflare.com/auth/shopify/callback",
+  "https://empty-guarantee-importantly-rp.trycloudflare.com/api/auth/callback",
+  "https://empty-guarantee-importantly-rp.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
@@ -26,7 +26,7 @@ api_version = "2024-04"
   shop_deletion_url = "https://seahorse-app-fstfy.ondigitalocean.app/api/webhooks"
 
 [app_proxy]
-url = "https://forward-combo-engagement-pensions.trycloudflare.com/userdata"
+url = "https://empty-guarantee-importantly-rp.trycloudflare.com/userdata"
 subpath = "proxy"
 prefix = "apps"
 
