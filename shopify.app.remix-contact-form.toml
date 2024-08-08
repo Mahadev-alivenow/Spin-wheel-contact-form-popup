@@ -3,7 +3,7 @@
 client_id = "cf6d0a71f3d1600f330d34f5811c8a9e"
 name = "Remix Contact Form"
 handle = "remix-contact-form"
-application_url = "https://behind-differences-example-communication.trycloudflare.com"
+application_url = "https://jumping-moves-knowing-origins.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://behind-differences-example-communication.trycloudflare.com/auth/callback",
-  "https://behind-differences-example-communication.trycloudflare.com/auth/shopify/callback",
-  "https://behind-differences-example-communication.trycloudflare.com/api/auth/callback"
+  "https://jumping-moves-knowing-origins.trycloudflare.com/auth/callback",
+  "https://jumping-moves-knowing-origins.trycloudflare.com/auth/shopify/callback",
+  "https://jumping-moves-knowing-origins.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
