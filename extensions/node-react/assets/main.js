@@ -226,6 +226,20 @@ function resize() {
 
 // $("root").css("overflow", "hidden");
 
+
+// Example: shopify app extension script
+document.addEventListener("DOMContentLoaded", function () {
+  var iframe = document.createElement("iframe");
+  iframe.src = "https://seahorse-app-fstfy.ondigitalocean.app/";
+  iframe.width = "100%";
+  iframe.height = "600";
+  iframe.sandbox = "allow-scripts allow-same-origin allow-forms allow-popups";
+  iframe.frameBorder = "0";
+  document.body.appendChild(iframe);
+});
+
+
+
 let proxy = "proxy-5"
 let userForm = document.getElementById("submit-btn");
 // const userForm = document.getElementById("form");
