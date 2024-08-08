@@ -2,7 +2,7 @@
 
 name = "Contact-form-pop-up"
 client_id = "31fb66c1b7c967032e011360ca7b2411"
-application_url = "https://thehun-guinea-plant-boundary.trycloudflare.com"
+application_url = "https://forward-combo-engagement-pensions.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "read_orders,read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://thehun-guinea-plant-boundary.trycloudflare.com/auth/callback",
-  "https://thehun-guinea-plant-boundary.trycloudflare.com/auth/shopify/callback",
-  "https://thehun-guinea-plant-boundary.trycloudflare.com/api/auth/callback",
-  "https://thehun-guinea-plant-boundary.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://forward-combo-engagement-pensions.trycloudflare.com/auth/callback",
+  "https://forward-combo-engagement-pensions.trycloudflare.com/auth/shopify/callback",
+  "https://forward-combo-engagement-pensions.trycloudflare.com/api/auth/callback",
+  "https://forward-combo-engagement-pensions.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
@@ -26,7 +26,7 @@ api_version = "2024-04"
   shop_deletion_url = "https://seahorse-app-fstfy.ondigitalocean.app/api/webhooks"
 
 [app_proxy]
-url = "https://thehun-guinea-plant-boundary.trycloudflare.com/userdata"
+url = "https://forward-combo-engagement-pensions.trycloudflare.com/userdata"
 subpath = "proxy"
 prefix = "apps"
 
