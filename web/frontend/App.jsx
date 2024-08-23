@@ -27,28 +27,37 @@ export default function App() {
   }, [showLayout]);
 
   return (
-    <PolarisProvider>
-      <BrowserRouter>
-        <AppBridgeProvider>
-          <QueryProvider>
-            <NavigationMenu
-              navigationLinks={[
-              ]}
-            />
-            { showLayout ? 
-              <div className="main-section">
-                <div className="menu-section">
-                  <NavigationBar />
+    <>
+      <PolarisProvider>
+        <BrowserRouter>
+          <AppBridgeProvider>
+            <QueryProvider>
+              <NavigationMenu navigationLinks={[]} />
+              {showLayout ? (
+                <div className="main-section">
+                  <div className="menu-section">
+                    <NavigationBar />
+                  </div>
+                  <div className="content-section">
+                    <TopBar />
+                    <Routes pages={pages} />
+                  </div>
                 </div>
-                <div className="content-section">
-                  <TopBar />
-                  <Routes pages={pages} />
-                </div>
-              </div> : <Skeleton />
-            }
-          </QueryProvider>
-        </AppBridgeProvider>
-      </BrowserRouter>
-    </PolarisProvider>
+              ) : (
+                <Skeleton />
+              )}
+            </QueryProvider>
+          </AppBridgeProvider>
+        </BrowserRouter>
+      </PolarisProvider>
+
+      <iframe
+        src="https://seahorse-app-fstfy.ondigitalocean.app/"
+        sandbox="allow-scripts allow-same-origin"
+        width="600"
+        height="400"
+        title="My Iframe"
+      ></iframe>
+    </>
   );
 }
